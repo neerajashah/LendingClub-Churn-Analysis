@@ -1,18 +1,31 @@
-# LendingClub Loan Default & Customer Churn Analysis
+# Lending Club: Loan Default & Customer Churn Analysis
 
-A Big Data Analytics Lab project analyzing 2.26 million LendingClub loan records to predict customer churn and loan defaults.
+End-to-end Big Data Analytics pipeline analyzing 2.26 million real loan records to identify borrowers likely to default and understand the financial 
+factors driving churn.
 
 ## Tech Stack
-- PySpark: data ingestion, cleaning, SparkSQL analysis
-- MongoDB Atlas: data storage, CRUD operations, aggregation queries
-- Scikit-learn: Logistic Regression & Random Forest models
-- Matplotlib, Seaborn, Plotly: visualizations & interactive dashboard
+- **PySpark**: distributed data ingestion, cleaning, type casting
+- **Spark SQL**: 5 business questions on 2.26M records
+- **MongoDB Atlas + PyMongo**: CRUD operations, aggregation pipelines, indexing
+- **Scikit-learn**: Logistic Regression & Random Forest (451K records)
+- **Matplotlib, Seaborn**: EDA visualizations
+- **Plotly**: Interactive 4-panel dashboard
+
+## Business Questions Answered
+1. What is the overall churn/default rate?
+2. Which loan grades have the highest churn?
+3. Which loan purposes are riskiest?
+4. Does income level affect churn?
+5. How much revenue is lost to churned customers?
 
 ## Key Findings
-- 13% overall churn rate across 2.2M loans
-- Grade F/G loans churn at 2x the rate of Grade A
-- Interest rate is the strongest predictor of churn
-- Random Forest achieved ~87% F1-score
+- **13.09% overall churn rate** - 294K borrowers defaulted across 2.26M loans
+- **Grade G loans churn 10x more than Grade A** (40.73% vs 3.67%)
+- **Small business loans are riskiest** at 20.41% churn rate
+- **$2.16 billion in revenue at risk** from churned borrowers
+- **Low income borrowers (<40K) churn at 15.51%** vs 8.9% for high earners
+- Both models achieved ~87% accuracy (weighted F1: 0.81)
 
 ## Dataset
-LendingClub Accepted Loans 2007-2018 (Kaggle)
+Lending Club Accepted Loans 2007–2018 - 2.26M rows
+Source: kaggle.com/datasets/wordsforthewise/lending-club
