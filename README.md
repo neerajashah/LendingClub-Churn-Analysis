@@ -28,4 +28,4 @@ factors driving churn.
 
 ## Dataset
 Lending Club Accepted Loans 2007–2018 - 2.26M rows
-Source: kaggle.com/datasets/wordsforthewise/lending-club
+
